@@ -2,33 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileTracker : MonoBehaviour
+public class PrefabSpawner : MonoBehaviour
 {
     public GameObject prefab;
     public List<GameObject> spawnPositions;
-    public GameObject target;
-    public float speed = 1f;
-    public KeyCode keyToPress;
-
+    public KeyCode keyToPress = KeyCode.Space;
 
     private void Update()
     {
-        if(Input.GetKeyDown(keyToPress))
+        if (Input.GetKeyDown(keyToPress))
         {
-            GameObject rocket = Instantiate(prefab, spawnPositions[Random.Range(0, 4)].transform.position, prefab.transform.rotation);
-            rocket.transform.LookAt(target.transform);
-            StartCoroutine(SendHoming(rocket));
+            Vector3 spawnPosition = spawnPositions[Random.Range(0, spawnPositions.Count)].transform.position;
+            Instantiate(prefab, spawnPosition, Quaternion.identity);
         }
-    }
-
-    public IEnumerator SendHoming(GameObject rocket)
-    {
-        while (Vector3.Distance(target.transform.position, rocket.transform.position)>0.3f)
-        {
-            rocket.transform.position += (target.transform.position - rocket.transform.position).normalized * speed * Time.deltaTime;
-            rocket.transform.LookAt(target.transform);
-            yield return null;
-        }
-        Destroy(rocket);
     }
 }
