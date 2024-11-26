@@ -1591,7 +1591,7 @@ PrefabInstance:
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1735309605}
+      objectReference: {fileID: 1735309606}
     - target: {fileID: 7572466951844820473, guid: df64bf5efda75be4db0c812f9277d678,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
@@ -1600,12 +1600,12 @@ PrefabInstance:
     - target: {fileID: 7572466951844820473, guid: df64bf5efda75be4db0c812f9277d678,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: OnClick
+      value: ChangeScene
       objectReference: {fileID: 0}
     - target: {fileID: 7572466951844820473, guid: df64bf5efda75be4db0c812f9277d678,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UiTest, Assembly-CSharp
+      value: SceneChange, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7572466951844820473, guid: df64bf5efda75be4db0c812f9277d678,
         type: 3}
@@ -1751,6 +1751,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1735309605}
+    - targetCorrespondingSourceObject: {fileID: 558185252157970195, guid: df64bf5efda75be4db0c812f9277d678,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1735309606}
   m_SourcePrefab: {fileID: 100100000, guid: df64bf5efda75be4db0c812f9277d678, type: 3}
 --- !u!1 &1735309600 stripped
 GameObject:
@@ -1770,6 +1774,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c502bb30590684690defaa7d4f7c1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1735309606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735309600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df335d5fa466dcf4290e4d23c4cca781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: SampleScene
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
