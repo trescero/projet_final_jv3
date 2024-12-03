@@ -2,14 +2,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
 
+	public Tourelles_Parametres projectileValues;
 	private Transform target;
-
-	public float speed = 70f;
-
-	public int damage = 50;
-
-	public float explosionRadius = 0f;
-	public GameObject impactEffect;
 	
 	public void Seek (Transform _target)
 	{
@@ -26,7 +20,7 @@ public class Bullet : MonoBehaviour {
 		}
 
 		Vector3 dir = target.position - transform.position;
-		float distanceThisFrame = speed * Time.deltaTime;
+		float distanceThisFrame = projectileValues.speed * Time.deltaTime;
 
 		if (dir.magnitude <= distanceThisFrame)
 		{
@@ -41,10 +35,10 @@ public class Bullet : MonoBehaviour {
 
 	void HitTarget ()
 	{
-		GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
+		GameObject effectIns = (GameObject)Instantiate(projectileValues.impactEffect, transform.position, transform.rotation);
 		Destroy(effectIns, 5f);
 
-		if (explosionRadius > 0f)
+		if (projectileValues.explosionRadius > 0f)
 		{
 			Explode();
 		} else
@@ -57,7 +51,7 @@ public class Bullet : MonoBehaviour {
 
 	void Explode ()
 	{
-		Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
+		Collider[] colliders = Physics.OverlapSphere(transform.position, projectileValues.explosionRadius);
 		foreach (Collider collider in colliders)
 		{
 			if (collider.tag == "Enemy")
@@ -73,13 +67,13 @@ public class Bullet : MonoBehaviour {
 
 		if (e != null)
 		{
-			e.TakeDamage(damage);
+			e.TakeDamage(projectileValues.damage);
 		}
 	}
 
 	void OnDrawGizmosSelected ()
 	{
 		Gizmos.color = Color.red;
-		Gizmos.DrawWireSphere(transform.position, explosionRadius);
+		Gizmos.DrawWireSphere(transform.position, projectileValues.explosionRadius);
 	}
 }
