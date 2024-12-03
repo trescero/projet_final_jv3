@@ -1,0 +1,10 @@
+using UnityEngine;
+
+[CreateAssetMenu(fileName = "Data", menuName = "Tourelles/Valeurs", order = 1)]
+public class Tourelles_Parametres : ScriptableObject
+{
+	public float range = 15f;
+    public GameObject prefabProjectile;
+    public float fireRate = 1f;
+	public float turnSpeed = 10f;
+}
