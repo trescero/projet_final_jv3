@@ -9,13 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e79efa20a559efa4ab4f040ed9de8d50, type: 3}
-  m_Name: PlayerInfo
+  m_Script: {fileID: 11500000, guid: f2bb39ce444dd9b4d86699ff43849c49, type: 3}
+  m_Name: GameEvent
   m_EditorClassIdentifier: 
-  money: 63
-  points: 120
-  towerInHand: 0
-  towerInHandType: 
-  towerPrefab_1: {fileID: 0}
-  towerPrefab_2: {fileID: 0}
-  towerPrefab_3: {fileID: 0}
+  listeners: []
