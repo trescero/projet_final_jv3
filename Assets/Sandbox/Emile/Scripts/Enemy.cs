@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Enemy : MonoBehaviour {
 
@@ -9,14 +10,16 @@ public class Enemy : MonoBehaviour {
 	public float speed;
 
 	public float startHealth = 100;
-	private float health;
+	[HideInInspector] public float health;
 
 	public int worth = 50;
 
+    
 	public GameObject deathEffect;
 
-	/*[Header("Unity Stuff")]
-	public Image healthBar;*/
+	[Header("Unity Stuff")]
+	public Image healthBar;
+ 	public TextMeshProUGUI healthText;
 
 	private bool isDead = false;
 
@@ -29,8 +32,8 @@ public class Enemy : MonoBehaviour {
 	public void TakeDamage (float amount)
 	{
 		health -= amount;
-
-		//healthBar.fillAmount = health / startHealth;
+		healthBar.fillAmount = health / startHealth;
+		healthText.text = $"{Mathf.CeilToInt(health)} HP";
 
 		if (health <= 0 && !isDead)
 		{
