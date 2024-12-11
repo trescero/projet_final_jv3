@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb732a4fa8ee4d84a9a6ee8838fa1793, type: 3}
   m_Name: Tower
   m_EditorClassIdentifier: 
-  Vie: 100000
+  VieDepart: 100000

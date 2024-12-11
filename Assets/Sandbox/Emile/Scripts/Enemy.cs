@@ -1,39 +1,51 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour {
 
 	public float startSpeed = 10f;
-
 	[HideInInspector]
 	public float speed;
 
-	public float startHealth = 100;
+	//le montant de point que coute l'ennemi lorsque tuer
+	/*public int worth = 50;*/
+    
+
+	[Header("Vie")]
+	public EnnemiValeurs ScriptEnnemiValeurs;
+	public GameObject deathEffect;
+	
+	[Header("Tower")]
+	public string towerTag = "Tower";
+	public bool isTower;
+
+	[Header("HealthBar")]
+	public Healthbar HealthbarScript;
+	NavMeshAgent agent;
+	private bool isDead = false;
 	[HideInInspector] public float health;
 
-	public int worth = 50;
-
-    
-	public GameObject deathEffect;
-
-	[Header("Unity Stuff")]
-	public Image healthBar;
- 	public TextMeshProUGUI healthText;
-
-	private bool isDead = false;
 
 	void Start ()
 	{
 		speed = startSpeed;
-		health = startHealth;
+		health = ScriptEnnemiValeurs.VieDepart;
+
+		if(!isTower)
+		{			
+        	agent = GetComponent<NavMeshAgent>();
+			agent.speed = ScriptEnnemiValeurs.SpeedDepart;
+			agent.SetDestination(GameObject.FindGameObjectWithTag("Tower").transform.position);
+		}
 	}
 
 	public void TakeDamage (float amount)
 	{
 		health -= amount;
-		healthBar.fillAmount = health / startHealth;
-		healthText.text = $"{Mathf.CeilToInt(health)} HP";
+		HealthbarScript._healthbarSprite.fillAmount = health / ScriptEnnemiValeurs.VieDepart;
+		HealthbarScript.healthText.text = $"{Mathf.CeilToInt(health)} HP";
 
 		if (health <= 0 && !isDead)
 		{
@@ -51,13 +63,11 @@ public class Enemy : MonoBehaviour {
 		isDead = true;
 
 		//PlayerStats.Money += worth;
+		//WaveSpawner.EnemiesAlive--;
 
 		GameObject effect = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
-		Destroy(effect, 5f);
-
-		//WaveSpawner.EnemiesAlive--;
+		Destroy(effect, 2f);
 
 		Destroy(gameObject);
 	}
-
 }

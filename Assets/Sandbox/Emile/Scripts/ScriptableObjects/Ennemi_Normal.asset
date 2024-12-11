@@ -10,6 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb732a4fa8ee4d84a9a6ee8838fa1793, type: 3}
-  m_Name: Ennemie_Normal
+  m_Name: Ennemi_Normal
   m_EditorClassIdentifier: 
-  VieDepart: 250
+  VieDepart: 750
+  SpeedDepart: 100

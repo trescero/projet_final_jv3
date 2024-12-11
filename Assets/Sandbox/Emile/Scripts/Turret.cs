@@ -10,24 +10,15 @@ public class Turret : MonoBehaviour
 	private Enemy targetEnemy;
 
 	[Header("General")]
-
-	//public float range = 15f;
-
+	public GameObject batterie;
+	
 	[Header("Use Bullets (default)")]
-	//public GameObject bulletPrefab;
-	//public float fireRate = 1f;
 	private float fireCountdown = 0f;
 
 	[Header("Unity Setup Fields")]
-
 	public string enemyTag = "Enemy";
-
 	public Transform partToRotate;
-	//public float turnSpeed = 10f;
-
 	public Transform firePoint;
-
-	// Use this for initialization
 	void Start () {
 		InvokeRepeating("UpdateTarget", 0f, 0.5f);
 	}
@@ -55,28 +46,19 @@ public class Turret : MonoBehaviour
 		{
 			target = null;
 		}
-		
-
 	}
-
-	// Update is called once per frame
 	void Update () {
 		if (target == null)
 		{
 			return;
 		}
-
-		LockOnTarget();
-
-		
+		LockOnTarget();		
 		if (fireCountdown <= 0f)
 		{
 			Shoot();
 			fireCountdown = 1f / tourrellesValues.fireRate;
 		}
-
 		fireCountdown -= Time.deltaTime;
-
 	}
 
 	void LockOnTarget ()
@@ -100,5 +82,10 @@ public class Turret : MonoBehaviour
 	{
 		Gizmos.color = Color.red;
 		Gizmos.DrawWireSphere(transform.position, tourrellesValues.range);
+	}
+
+	public void Placer()
+	{
+		batterie.SetActive(true);
 	}
 }

@@ -196,9 +196,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdb5127cb710bc74ebc7ee40d7907693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _healthbarSprite: {fileID: 6225365856129074585}
   _backgroundSprite: {fileID: 4201792607775750483}
   healthText: {fileID: 3480780647937309846}
-  ScriptVie: {fileID: 11400000, guid: d04ff1ffa9383a64c9d8367944bb163b, type: 2}
+  ScriptEnnemiValeurs: {fileID: 11400000, guid: 57704dc0e2d62e842b7fb8bd8f8b306b,
+    type: 2}
 --- !u!1 &8165522172630750431
 GameObject:
   m_ObjectHideFlags: 0
