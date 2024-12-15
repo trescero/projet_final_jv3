@@ -32,6 +32,10 @@ public class SpawnTower : MonoBehaviour
     [Tooltip("Bouton utilis� pour faire appara�tre une tour.")]
     [SerializeField] private OVRInput.Button spawnButton;
 
+    [Header("Informations Player")]
+    [SerializeField] private int playerMoney = 100;
+    [SerializeField] private int towerCost = 50;
+
     // Variables priv�es
     private MRUKRoom room; // R�f�rence � la pi�ce actuelle d�tect�e par MRUK
     private Vector3 hitPoint; // Point d'impact du rayon
