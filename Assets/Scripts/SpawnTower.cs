@@ -33,12 +33,13 @@ public class SpawnTower : MonoBehaviour
     [SerializeField] private OVRInput.Button spawnButton;
 
     [Header("Informations Player")]
-    [SerializeField] private int playerMoney = 100;
+    [SerializeField] private Player_ScriptableObject player;
     [SerializeField] private int towerCost = 50;
 
     // Variables priv�es
     private MRUKRoom room; // R�f�rence � la pi�ce actuelle d�tect�e par MRUK
     private Vector3 hitPoint; // Point d'impact du rayon
+    private bool canPlaceTower = false;
 
     private void Start()
     {
@@ -60,6 +61,19 @@ public class SpawnTower : MonoBehaviour
 
         // G�rer le raycast pour d�tecter des ancres
         ProcessRaycast();
+
+        if (OVRInput.GetDown(spawnButton, OVRInput.Controller.RTouch))
+        {
+            if (player.money >= towerCost)
+            {
+                canPlaceTower = true;
+                Debug.Log("Button pressed. Ready to place a tower.");
+            }
+            else
+            {
+                Debug.LogWarning("Not enough money to place a tower!");
+            }
+        }
     }
 
     /// <summary>
@@ -136,9 +150,11 @@ public class SpawnTower : MonoBehaviour
     private void HandleControllerAction(OVRInput.Controller controller)
     {
         // V�rifier si le bouton de cr�ation de tour est press�
-        if (OVRInput.GetDown(spawnButton, controller))
+        if (OVRInput.GetDown(spawnButton, controller) && canPlaceTower)
         {
             Instantiate(towerPrefab, hitPoint, Quaternion.identity);
+            player.money -= towerCost;
+            canPlaceTower = false;
         }
     }
 }
