@@ -12,8 +12,8 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        _textMoney.text = _player.money.ToString();
-        _textPoints.text = _player.points.ToString();
+        _textMoney.text = "$: " + _player.money.ToString();
+        _textPoints.text = "Points: " + _player.points.ToString();
     }
     
 }

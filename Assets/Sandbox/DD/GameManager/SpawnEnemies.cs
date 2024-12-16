@@ -41,7 +41,7 @@ public class EnemySpawner : MonoBehaviour
             spawningWave = true;
 
             int groundEnemiesToSpawn = initialNbGroundEnemies + (currentWave - 1) * enemiesIncrementPerWave;
-            int strongerGroundEnemiesToSpawn = initialNbStrongGroundEnemies + (currentWave - 1) * strongerEnemiesIncrementPerWave;
+            int strongGroundEnemiesToSpawn = initialNbStrongGroundEnemies + (currentWave - 1) * strongerEnemiesIncrementPerWave;
             int airEnemiesToSpawn = initialNbAirEnemies + (currentWave - 1);
             float spawnInterval = Mathf.Max(0.5f, initialSpawnInterval - (currentWave - 1) * spawnIntervalReduction);
 
@@ -53,7 +53,7 @@ public class EnemySpawner : MonoBehaviour
             }
 
             // Spawn ennemis sol forts
-            for (int i = 0; i < strongerGroundEnemiesToSpawn; i++)
+            for (int i = 0; i < strongGroundEnemiesToSpawn; i++)
             {
                 SpawnGroundEnemy(PrefabStrongGround);
                 yield return new WaitForSeconds(spawnInterval);
