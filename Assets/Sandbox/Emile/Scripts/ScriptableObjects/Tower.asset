@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Tower
   m_EditorClassIdentifier: 
   VieDepart: 100000
+  SpeedDepart: 0
+  DamageDepart: 100000
