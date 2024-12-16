@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class SpawnButton : MonoBehaviour
 {
-    [SerializeField] SpawnTower spawnTower;
+    [SerializeField] private SpawnTower spawnTower;
 
-    public void spawnButton(GameObject tower){ 
-
+    // This method will replace the towerPrefab in SpawnTower when the button is pressed
+    public void SpawnButtonAction(GameObject newTowerPrefab)
+    {
+        spawnTower.SetTowerPrefab(newTowerPrefab);
+        
     }
- 
 }

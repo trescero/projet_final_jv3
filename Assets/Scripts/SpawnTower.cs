@@ -67,11 +67,11 @@ public class SpawnTower : MonoBehaviour
             if (player.money >= towerCost)
             {
                 canPlaceTower = true;
-                Debug.Log("Button pressed. Ready to place a tower.");
+                Debug.Log("Peut placer tour");
             }
             else
             {
-                Debug.LogWarning("Not enough money to place a tower!");
+                Debug.Log("Peut pas placer tour");
             }
         }
     }
@@ -156,6 +156,11 @@ public class SpawnTower : MonoBehaviour
             player.money -= towerCost;
             canPlaceTower = false;
         }
+    }
+
+    public void SetTowerPrefab(GameObject newTowerPrefab)
+    {
+        towerPrefab = newTowerPrefab;
     }
 }
 

@@ -344,7 +344,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2420143058575389204}
-  - {fileID: 1471800059}
   - {fileID: 7006518577734495289}
   - {fileID: 259025981}
   - {fileID: 1346583500}
@@ -1272,61 +1271,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1966180205047769847}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1471800058
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1471800059}
-  - component: {fileID: 1471800060}
-  m_Layer: 0
-  m_Name: spawnObject (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1471800059
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1471800058}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 355025260}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1471800060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1471800058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f91f6ecf93453147a20cb559cc80273, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rayStartPoint: {fileID: 1226313115}
-  rayLength: 8
-  labelFlag: 9
-  gizmoDisplay: {fileID: 4396335525730801759}
-  gizmoLabelText: {fileID: 6101970952190512562}
-  showGizmoLabelText: 0
-  towerPrefab: {fileID: 1729996401445817104, guid: ccb288cc7a0cc5f41bc8203767c6b4fa,
-    type: 3}
-  spawnButton: 8192
-  player: {fileID: 11400000, guid: 91d1b0b89c9fad745adf769fa10dfd5e, type: 2}
-  towerCost: 300
 --- !u!4 &1574195513 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4869577802921675287, guid: ea16c3c8c1688234fa81a4f39339bf1b,
@@ -2039,10 +1983,10 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2071033126}
         m_TargetAssemblyTypeName: SpawnButton, Assembly-CSharp
-        m_MethodName: spawnButton
+        m_MethodName: SpawnButtonAction
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7506498879959119148, guid: b7f8fc65a1c6e164e9680e43a1001a14,
+          m_ObjectArgument: {fileID: 1729996401445817104, guid: ccb288cc7a0cc5f41bc8203767c6b4fa,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -27398,10 +27342,10 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 9054006159370236321}
         m_TargetAssemblyTypeName: SpawnButton, Assembly-CSharp
-        m_MethodName: spawnButton
+        m_MethodName: SpawnButtonAction
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1729996401445817104, guid: ccb288cc7a0cc5f41bc8203767c6b4fa,
+          m_ObjectArgument: {fileID: 7506498879959119148, guid: b7f8fc65a1c6e164e9680e43a1001a14,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
