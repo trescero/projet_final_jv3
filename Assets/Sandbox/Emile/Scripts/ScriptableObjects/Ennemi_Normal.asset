@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: Ennemi_Normal
   m_EditorClassIdentifier: 
   VieDepart: 750
-  SpeedDepart: 100
+  SpeedDepart: 15
+  DamageDepart: 300
+  ArgentDepart: 200
+  PointDepart: 50

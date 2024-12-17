@@ -5,9 +5,9 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour {
 
-	public float startSpeed = 10f;
-	[HideInInspector]
-	public float speed;
+	//public float startSpeed = 10f;
+	//[HideInInspector]
+	//public float speed;
 
 	//le montant de point que coute l'ennemi lorsque tuer
 	/*public int worth = 50;*/
@@ -26,12 +26,15 @@ public class Enemy : MonoBehaviour {
 	NavMeshAgent agent;
 	private bool isDead = false;
 	[HideInInspector] public float health;
-
+	[HideInInspector] public float damage;
 
 	void Start ()
 	{
-		speed = startSpeed;
+		//speed = startSpeed;
 		health = ScriptEnnemiValeurs.VieDepart;
+		damage = ScriptEnnemiValeurs.DamageDepart;
+		Debug.Log(ScriptEnnemiValeurs.DamageDepart);
+
 
 		if(!isTower)
 		{			
@@ -53,18 +56,20 @@ public class Enemy : MonoBehaviour {
 		}
 	}
 
-	public void Slow (float pct)
+	/*public void Slow (float pct)
 	{
 		speed = startSpeed * (1f - pct);
-	}
+	}*/
 
 	void Die ()
 	{
 		isDead = true;
 
 		//PlayerStats.Money += worth;
-		//WaveSpawner.EnemiesAlive--;
+		Debug.Log("ARGENT :" + ScriptEnnemiValeurs.ArgentDepart);
+		Debug.Log("point :" + ScriptEnnemiValeurs.PointDepart);
 
+		//WaveSpawner.EnemiesAlive--;
 		GameObject effect = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
 		Destroy(effect, 2f);
 

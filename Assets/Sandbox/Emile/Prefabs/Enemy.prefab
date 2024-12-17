@@ -430,16 +430,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea3cb3da980fd154392f6ff2bda8fa5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpeed: 10
-  speed: 0
   ScriptEnnemiValeurs: {fileID: 11400000, guid: 57704dc0e2d62e842b7fb8bd8f8b306b,
     type: 2}
   deathEffect: {fileID: 1983816175683476712, guid: 4c703927a86d48e44b0a22c5367ba8ac,
     type: 3}
+  explosionSFX: {fileID: 0}
   towerTag: Tower
   isTower: 0
   HealthbarScript: {fileID: 664850249549419161}
   health: 0
+  damage: 0
 --- !u!195 &5765059730846832948
 NavMeshAgent:
   m_ObjectHideFlags: 0

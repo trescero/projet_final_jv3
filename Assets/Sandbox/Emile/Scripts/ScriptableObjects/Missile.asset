@@ -17,8 +17,8 @@ MonoBehaviour:
     type: 3}
   fireRate: 1
   turnSpeed: 7
-  speed: 10
-  damage: 50
-  explosionRadius: 0
-  impactEffect: {fileID: 6092068517029817883, guid: 371cef5004c06614082d5f420b6e2fd7,
+  speed: 40
+  damage: 400
+  explosionRadius: 8.5
+  impactEffect: {fileID: 1983816175683476712, guid: 77342a03dff984c4dbca6aa6ef9d9538,
     type: 3}

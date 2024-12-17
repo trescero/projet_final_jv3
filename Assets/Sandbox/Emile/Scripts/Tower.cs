@@ -12,9 +12,12 @@ public class Tower : MonoBehaviour
 
             Destroy(other.gameObject);
 
-            Enemy e = gameObject.GetComponent<Enemy>();            
-            e.TakeDamage(1000);
+            Enemy script = other.gameObject.GetComponent<Enemy>();
+            
+            Enemy e = gameObject.GetComponent<Enemy>();
+            e.TakeDamage(script.damage);
             Debug.Log("Enleve des points / scores");
+            Debug.Log(script.damage);
         }
 		
 	}
