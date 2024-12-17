@@ -578,6 +578,7 @@ MonoBehaviour:
   HealthbarScript: {fileID: 1799452315218373120}
   health: 0
   damage: 0
+  _player: {fileID: 11400000, guid: 91d1b0b89c9fad745adf769fa10dfd5e, type: 2}
 --- !u!195 &3758225335289991483
 NavMeshAgent:
   m_ObjectHideFlags: 0

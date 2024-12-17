@@ -28,6 +28,8 @@ public class Enemy : MonoBehaviour {
 	[HideInInspector] public float health;
 	[HideInInspector] public float damage;
 
+	[SerializeField] private Player_ScriptableObject _player;
+
 	void Start ()
 	{
 		//speed = startSpeed;
@@ -66,6 +68,10 @@ public class Enemy : MonoBehaviour {
 		isDead = true;
 
 		//PlayerStats.Money += worth;
+
+		_player.money += ScriptEnnemiValeurs.ArgentDepart;
+		_player.points += ScriptEnnemiValeurs.PointDepart;
+
 		Debug.Log("ARGENT :" + ScriptEnnemiValeurs.ArgentDepart);
 		Debug.Log("point :" + ScriptEnnemiValeurs.PointDepart);
 

@@ -8,14 +8,19 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text _textMoney;
     [SerializeField] private TMP_Text _textPoints;
     [SerializeField] private Player_ScriptableObject _player;
-
     [SerializeField] private GameObject uiPointage;
+    [SerializeField] private GameObject scriptEnemies;
 
     private void Update()
     {
         if (uiPointage != null && uiPointage.activeSelf)
         {
             UpdateUI();
+        }
+
+        if(_player.hasPlacedFirstTower == true)
+        {
+            scriptEnemies.SetActive(true);
         }
     }
 
@@ -25,6 +30,8 @@ public class GameManager : MonoBehaviour
         {
             UpdateUI();
         }
+
+        _player.hasPlacedFirstTower = false;
     }
 
     private void UpdateUI()
@@ -35,7 +42,7 @@ public class GameManager : MonoBehaviour
 
     public void ResetPlayerValues()
     {
-        _player.money = 0;
+        _player.money = 300;
         _player.points = 0;
 
         UpdateUI();

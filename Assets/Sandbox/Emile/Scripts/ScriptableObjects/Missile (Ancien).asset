@@ -17,6 +17,7 @@ MonoBehaviour:
     type: 3}
   fireRate: 0.8
   turnSpeed: 10
+  cost: 500
   speed: 40
   damage: 700
   explosionRadius: 7

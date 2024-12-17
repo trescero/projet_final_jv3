@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Emmemi_Gros
   m_EditorClassIdentifier: 
   VieDepart: 1250
-  SpeedDepart: 10
+  SpeedDepart: 1
   DamageDepart: 5000
   ArgentDepart: 350
-  PointDepart: 150
+  PointDepart: 600

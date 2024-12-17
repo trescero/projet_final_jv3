@@ -12,10 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e79efa20a559efa4ab4f040ed9de8d50, type: 3}
   m_Name: PlayerInfo
   m_EditorClassIdentifier: 
-  money: 999999350
-  points: 100
+  money: 300
+  points: 3550
   towerInHand: 0
-  towerInHandType: 
-  towerPrefab_1: {fileID: 0}
-  towerPrefab_2: {fileID: 0}
-  towerPrefab_3: {fileID: 0}
+  hasPlacedFirstTower: 0

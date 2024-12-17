@@ -33,11 +33,12 @@ public class SpawnTower : MonoBehaviour
 
     [Header("Informations Player")]
     [SerializeField] private Player_ScriptableObject player;
-    [SerializeField] private int towerCost = 50;
+    [SerializeField] private int towerCost = 500;
 
     // Variables privées
     private Vector3 hitPoint; // Point d'impact du rayon
     private bool canPlaceTower = false;
+
 
     private void Start()
     {
@@ -154,6 +155,8 @@ public class SpawnTower : MonoBehaviour
             selectedTowerPrefab = null;
             canPlaceTower = false;
             Debug.Log("Tour placée avec succès. Sélectionnez un nouveau type de tour.");
+
+            player.hasPlacedFirstTower = true;
         }
     }
 
@@ -161,6 +164,11 @@ public class SpawnTower : MonoBehaviour
     public void SetTowerPrefab(GameObject newTowerPrefab)
     {
         selectedTowerPrefab = newTowerPrefab;
+
+        Turret turretComponent = newTowerPrefab.GetComponent<Turret>();
+
+         
         Debug.Log($"Tour sélectionnée : {newTowerPrefab.name}");
+        towerCost = turretComponent.tourrellesValues.cost;
     }
 }

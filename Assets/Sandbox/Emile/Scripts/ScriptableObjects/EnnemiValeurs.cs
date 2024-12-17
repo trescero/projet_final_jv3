@@ -8,6 +8,6 @@ public class EnnemiValeurs : ScriptableObject
     public float VieDepart;
     public float SpeedDepart;
     public float DamageDepart;
-    public float ArgentDepart;
-    public float PointDepart;
+    public int ArgentDepart;
+    public int PointDepart;
 }

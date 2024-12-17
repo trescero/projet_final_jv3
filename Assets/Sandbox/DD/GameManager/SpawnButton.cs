@@ -10,6 +10,5 @@ public class SpawnButton : MonoBehaviour
     public void SpawnButtonAction(GameObject newTowerPrefab)
     {
         spawnTower.SetTowerPrefab(newTowerPrefab);
-        
     }
 }

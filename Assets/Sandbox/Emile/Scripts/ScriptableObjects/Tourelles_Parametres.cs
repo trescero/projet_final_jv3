@@ -8,6 +8,8 @@ public class Tourelles_Parametres : ScriptableObject
     public GameObject prefabProjectile;
     public float fireRate = 1f;
 	public float turnSpeed = 10f;
+
+    public int cost = 300;
     
     [Header("Projectile")]
     public float speed = 70f;
@@ -16,4 +18,5 @@ public class Tourelles_Parametres : ScriptableObject
 
 	public float explosionRadius = 0f;
 	public GameObject impactEffect;
+
 }
