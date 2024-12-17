@@ -8,7 +8,7 @@ public class Turret : MonoBehaviour
 
 	private Transform target;
 	private Enemy targetEnemy;
-    //public AudioSource fireSound;
+    public AudioSource fireSound;
 
 	[Header("General")]
 	public GameObject batterie;
@@ -75,8 +75,8 @@ public class Turret : MonoBehaviour
 		GameObject bulletGO = (GameObject)Instantiate(tourrellesValues.prefabProjectile, firePoint.position, firePoint.rotation);
 		Bullet bullet = bulletGO.GetComponent<Bullet>();
 
-		//fireSound.Play();
-
+		fireSound.Play();
+		Debug.Log("shoot");
 
 		if (bullet != null)
 			bullet.Seek(target);
