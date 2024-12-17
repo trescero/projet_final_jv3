@@ -1,6 +1,7 @@
 using UnityEngine.AI;
 using Unity.AI.Navigation;
 using Meta.XR.MRUtilityKit;
+using UnityEngine;
 
 public class RuntimeNavmeshBuilder : MonoBehaviour {
 
