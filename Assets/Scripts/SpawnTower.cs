@@ -1,113 +1,114 @@
 using System.Collections.Generic;
 using UnityEngine;
-using Meta.XR.MRUtilityKit;
 using TMPro;
 
 public class SpawnTower : MonoBehaviour
 {
     [Header("Raycast Settings")]
-    [Tooltip("Point de d�part du rayon pour d�tecter les ancres.")]
+    [Tooltip("Point de départ du rayon pour détecter les objets.")]
     [SerializeField] private Transform rayStartPoint;
 
     [Tooltip("Longueur maximale du rayon.")]
     [SerializeField] private float rayLength = 8.0f;
 
-    [Tooltip("Filtre des �tiquettes des ancres � d�tecter.")]
-    [SerializeField] private MRUKAnchor.SceneLabels labelFlag;
+    [Tooltip("Tag des objets valides pour placer une tour.")]
+    [SerializeField] private string validTag = "Anchor";
 
     [Header("Gizmo Display")]
-    [Tooltip("Objet Gizmo affich� � l'emplacement de l'ancre d�tect�e.")]
+    [Tooltip("Objet Gizmo affiché à l'emplacement de l'objet détecté.")]
     [SerializeField] private GameObject gizmoDisplay;
 
-    [Tooltip("Texte affich� sur le Gizmo.")]
+    [Tooltip("Texte affiché sur le Gizmo.")]
     [SerializeField] private TextMeshPro gizmoLabelText;
 
-    [Tooltip("D�termine si le texte du Gizmo est visible.")]
+    [Tooltip("Détermine si le texte du Gizmo est visible.")]
     [SerializeField] private bool showGizmoLabelText;
 
     [Header("Tower Spawn")]
-    [Tooltip("Pr�fabriqu� de la tour � instancier.")]
-    [SerializeField] public GameObject towerPrefab;
+    [Tooltip("Préfabriqué de la tour à instancier.")]
+    [SerializeField] private GameObject selectedTowerPrefab;
 
-    [Tooltip("Bouton utilis� pour faire appara�tre une tour.")]
+    [Tooltip("Bouton utilisé pour faire apparaître une tour.")]
     [SerializeField] private OVRInput.Button spawnButton;
 
     [Header("Informations Player")]
     [SerializeField] private Player_ScriptableObject player;
     [SerializeField] private int towerCost = 50;
 
-    // Variables priv�es
-    private MRUKRoom room; // R�f�rence � la pi�ce actuelle d�tect�e par MRUK
+    // Variables privées
     private Vector3 hitPoint; // Point d'impact du rayon
     private bool canPlaceTower = false;
 
     private void Start()
     {
-        // Initialisation : r�cup�ration de la pi�ce actuelle
-        room = MRUK.Instance.GetCurrentRoom();
-
-        // Configurer la visibilit� du texte du Gizmo
+        // Configurer la visibilité du texte du Gizmo
         gizmoLabelText.enabled = showGizmoLabelText;
     }
 
     private void Update()
     {
-        // V�rifier si une pi�ce a �t� d�tect�e
-        if (room == null)
-        {
-            Debug.LogWarning("Aucune pi�ce d�tect�e.");
-            return;
-        }
-
-        // G�rer le raycast pour d�tecter des ancres
+        // Gérer le raycast pour détecter des objets avec un tag valide
         ProcessRaycast();
 
         if (OVRInput.GetDown(spawnButton, OVRInput.Controller.RTouch))
         {
+            if (selectedTowerPrefab == null)
+            {
+                Debug.LogWarning("Aucun type de tour sélectionné !");
+                return;
+            }
+
             if (player.money >= towerCost)
             {
                 canPlaceTower = true;
-                Debug.Log("Peut placer tour");
+                Debug.Log("Peut placer une tour.");
             }
             else
             {
-                Debug.Log("Peut pas placer tour");
+                Debug.Log("Pas assez d'argent pour placer une tour.");
             }
         }
     }
 
     /// <summary>
-    /// Effectue un raycast � partir du point de d�part pour d�tecter les ancres dans la sc�ne.
+    /// Effectue un raycast à partir du point de départ pour détecter les objets avec le tag spécifié.
     /// </summary>
     private void ProcessRaycast()
     {
         Ray ray = new Ray(rayStartPoint.position, rayStartPoint.forward);
 
-        // Lancer le rayon et v�rifier les collisions avec des ancres
-        if (room.Raycast(ray, rayLength, new LabelFilter(), out RaycastHit hitInfo, out MRUKAnchor anchor))
+        // Lancer le rayon et vérifier les collisions avec des objets
+        if (Physics.Raycast(ray, out RaycastHit hitInfo, rayLength))
         {
-            // Si un objet est d�tect�, g�rer l'affichage du Gizmo
-            HandleGizmoDisplay(hitInfo, anchor);
-
-            // V�rifier si l'angle du Gizmo est correct
-            if (IsGizmoPointingSkyward())
+            if (hitInfo.collider.CompareTag(validTag))
             {
-                HandleControllerAction(OVRInput.Controller.RTouch);
+                // Si un objet avec un tag valide est détecté, gérer l'affichage du Gizmo
+                HandleGizmoDisplay(hitInfo);
+
+                // Vérifier si l'angle du Gizmo est correct
+                if (IsGizmoPointingSkyward())
+                {
+                    HandleControllerAction(OVRInput.Controller.RTouch);
+                }
+            }
+            else
+            {
+                // Désactiver le Gizmo si l'objet n'a pas le tag valide
+                gizmoDisplay.SetActive(false);
             }
         }
         else
         {
-            // D�sactiver le Gizmo si aucun objet n'est d�tect�
+            // Désactiver le Gizmo si aucun objet n'est détecté
             gizmoDisplay.SetActive(false);
         }
     }
 
     /// <summary>
-    /// Active et configure l'affichage du Gizmo en fonction de l'objet d�tect�.
+    /// Active et configure l'affichage du Gizmo en fonction de l'objet détecté.
     /// </summary>
     /// <param name="hitInfo">Informations sur l'impact du rayon.</param>
-    /// <param name="anchor">Ancre d�tect�e par le raycast.</param>
-    private void HandleGizmoDisplay(RaycastHit hitInfo, MRUKAnchor anchor)
+    private void HandleGizmoDisplay(RaycastHit hitInfo)
     {
         gizmoDisplay.SetActive(true);
 
@@ -116,12 +117,12 @@ public class SpawnTower : MonoBehaviour
         gizmoDisplay.transform.position = hitPoint;
         gizmoDisplay.transform.rotation = Quaternion.LookRotation(-hitInfo.normal);
 
-        // Mettre � jour le texte affich�
-        gizmoLabelText.text = $"Anchor: {anchor.Label}";
+        // Mettre à jour le texte affiché
+        gizmoLabelText.text = $"Tag: {hitInfo.collider.tag}";
     }
 
     /// <summary>
-    /// V�rifie si le Gizmo pointe dans une direction "ciel".
+    /// Vérifie si le Gizmo pointe dans une direction "ciel".
     /// </summary>
     /// <returns>True si l'angle est dans les limites acceptables.</returns>
     private bool IsGizmoPointingSkyward()
@@ -130,7 +131,7 @@ public class SpawnTower : MonoBehaviour
         const float minAngle = 89.0f;
         const float maxAngle = 91.0f;
 
-        // V�rifier si l'angle est dans la plage accept�e
+        // Vérifier si l'angle est dans la plage acceptée
         if (rotationXGizmo >= minAngle && rotationXGizmo <= maxAngle)
         {
             Debug.LogWarning("L'objet pointe vers le ciel !");
@@ -143,25 +144,23 @@ public class SpawnTower : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// G�re les actions effectu�es par le contr�leur lorsqu'un bouton est press�.
-    /// </summary>
-    /// <param name="controller">Contr�leur utilis� pour l'interaction.</param>
+    //Verifie que le joueur peut placer une tour lorsque le bouton est pressed et sassure qu le joueur peut juste placer une tourelle a la fois
     private void HandleControllerAction(OVRInput.Controller controller)
     {
-        // V�rifier si le bouton de cr�ation de tour est press�
         if (OVRInput.GetDown(spawnButton, controller) && canPlaceTower)
         {
-            Instantiate(towerPrefab, hitPoint, Quaternion.identity);
+            Instantiate(selectedTowerPrefab, hitPoint, Quaternion.identity);
             player.money -= towerCost;
+            selectedTowerPrefab = null;
             canPlaceTower = false;
+            Debug.Log("Tour placée avec succès. Sélectionnez un nouveau type de tour.");
         }
     }
 
+    // Change prefab tower pour celui du bouton
     public void SetTowerPrefab(GameObject newTowerPrefab)
     {
-        towerPrefab = newTowerPrefab;
+        selectedTowerPrefab = newTowerPrefab;
+        Debug.Log($"Tour sélectionnée : {newTowerPrefab.name}");
     }
 }
-
-

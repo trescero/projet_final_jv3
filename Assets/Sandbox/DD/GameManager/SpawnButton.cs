@@ -6,7 +6,7 @@ public class SpawnButton : MonoBehaviour
 {
     [SerializeField] private SpawnTower spawnTower;
 
-    // This method will replace the towerPrefab in SpawnTower when the button is pressed
+    // Remplace le prefab tower dans le script de spawn
     public void SpawnButtonAction(GameObject newTowerPrefab)
     {
         spawnTower.SetTowerPrefab(newTowerPrefab);
