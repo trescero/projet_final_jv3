@@ -45,7 +45,5 @@ public class GameManager : MonoBehaviour
     {
         _player.money = 300;
         _player.points = 0;
-
-        UpdateUI();
     }
 }

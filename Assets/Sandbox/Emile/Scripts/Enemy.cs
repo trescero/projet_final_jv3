@@ -35,7 +35,7 @@ public class Enemy : MonoBehaviour {
 		//speed = startSpeed;
 		health = ScriptEnnemiValeurs.VieDepart;
 		damage = ScriptEnnemiValeurs.DamageDepart;
-		Debug.Log(ScriptEnnemiValeurs.DamageDepart);
+		//Debug.Log(ScriptEnnemiValeurs.DamageDepart);
 
 
 		if(!isTower)
@@ -72,8 +72,8 @@ public class Enemy : MonoBehaviour {
 		_player.money += ScriptEnnemiValeurs.ArgentDepart;
 		_player.points += ScriptEnnemiValeurs.PointDepart;
 
-		Debug.Log("ARGENT :" + ScriptEnnemiValeurs.ArgentDepart);
-		Debug.Log("point :" + ScriptEnnemiValeurs.PointDepart);
+		//Debug.Log("ARGENT :" + ScriptEnnemiValeurs.ArgentDepart);
+		//Debug.Log("point :" + ScriptEnnemiValeurs.PointDepart);
 
 		//WaveSpawner.EnemiesAlive--;
 		GameObject effect = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);

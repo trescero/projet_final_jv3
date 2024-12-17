@@ -69,7 +69,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175642961387279056}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -234,6 +234,16 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8346847347595315476, guid: 2062908325e58874ebf00a9c54237ba7,
+        type: 3}
+      propertyPath: m_TagString
+      value: TowerInHand
+      objectReference: {fileID: 0}
+    - target: {fileID: -7442116515086318550, guid: 2062908325e58874ebf00a9c54237ba7,
+        type: 3}
+      propertyPath: m_TagString
+      value: TowerInHand
+      objectReference: {fileID: 0}
     - target: {fileID: -6601405716367231473, guid: 2062908325e58874ebf00a9c54237ba7,
         type: 3}
       propertyPath: m_Materials.Array.size
@@ -255,6 +265,11 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -6267601569831717990, guid: 2062908325e58874ebf00a9c54237ba7,
+        type: 3}
+      propertyPath: m_TagString
+      value: TowerInHand
+      objectReference: {fileID: 0}
+    - target: {fileID: -6075121134082017985, guid: 2062908325e58874ebf00a9c54237ba7,
         type: 3}
       propertyPath: m_TagString
       value: TowerInHand
@@ -369,6 +384,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: e3b28c9e4c34efa4dacea086ff40f5e0, type: 2}
+    - target: {fileID: -2709901485545029967, guid: 2062908325e58874ebf00a9c54237ba7,
+        type: 3}
+      propertyPath: m_TagString
+      value: TowerInHand
+      objectReference: {fileID: 0}
     - target: {fileID: -2593348490266714952, guid: 2062908325e58874ebf00a9c54237ba7,
         type: 3}
       propertyPath: m_Materials.Array.size
@@ -444,6 +464,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: e3b28c9e4c34efa4dacea086ff40f5e0, type: 2}
+    - target: {fileID: -2178368371668368202, guid: 2062908325e58874ebf00a9c54237ba7,
+        type: 3}
+      propertyPath: m_TagString
+      value: TowerInHand
+      objectReference: {fileID: 0}
     - target: {fileID: -1823322365421230674, guid: 2062908325e58874ebf00a9c54237ba7,
         type: 3}
       propertyPath: m_Materials.Array.size
@@ -489,6 +514,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: e3b28c9e4c34efa4dacea086ff40f5e0, type: 2}
+    - target: {fileID: -742548587218930490, guid: 2062908325e58874ebf00a9c54237ba7,
+        type: 3}
+      propertyPath: m_TagString
+      value: TowerInHand
+      objectReference: {fileID: 0}
     - target: {fileID: -390467250922167010, guid: 2062908325e58874ebf00a9c54237ba7,
         type: 3}
       propertyPath: m_Materials.Array.size
@@ -519,6 +549,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: e3b28c9e4c34efa4dacea086ff40f5e0, type: 2}
+    - target: {fileID: 827338034875826230, guid: 2062908325e58874ebf00a9c54237ba7,
+        type: 3}
+      propertyPath: m_TagString
+      value: TowerInHand
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2062908325e58874ebf00a9c54237ba7,
         type: 3}
       propertyPath: m_Name
@@ -554,6 +589,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: e3b28c9e4c34efa4dacea086ff40f5e0, type: 2}
+    - target: {fileID: 2180767432750665436, guid: 2062908325e58874ebf00a9c54237ba7,
+        type: 3}
+      propertyPath: m_TagString
+      value: TowerInHand
+      objectReference: {fileID: 0}
     - target: {fileID: 2932777120167868493, guid: 2062908325e58874ebf00a9c54237ba7,
         type: 3}
       propertyPath: m_Materials.Array.size
@@ -584,6 +624,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: e3b28c9e4c34efa4dacea086ff40f5e0, type: 2}
+    - target: {fileID: 3623580214341401970, guid: 2062908325e58874ebf00a9c54237ba7,
+        type: 3}
+      propertyPath: m_TagString
+      value: TowerInHand
+      objectReference: {fileID: 0}
     - target: {fileID: 3695666860197271449, guid: 2062908325e58874ebf00a9c54237ba7,
         type: 3}
       propertyPath: m_Materials.Array.size
@@ -629,6 +674,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: e3b28c9e4c34efa4dacea086ff40f5e0, type: 2}
+    - target: {fileID: 5532379359589712701, guid: 2062908325e58874ebf00a9c54237ba7,
+        type: 3}
+      propertyPath: m_TagString
+      value: TowerInHand
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546858042147213054, guid: 2062908325e58874ebf00a9c54237ba7,
+        type: 3}
+      propertyPath: m_TagString
+      value: TowerInHand
+      objectReference: {fileID: 0}
     - target: {fileID: 6113248285220273500, guid: 2062908325e58874ebf00a9c54237ba7,
         type: 3}
       propertyPath: m_Materials.Array.size
@@ -659,6 +714,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: e3b28c9e4c34efa4dacea086ff40f5e0, type: 2}
+    - target: {fileID: 6294182023370380667, guid: 2062908325e58874ebf00a9c54237ba7,
+        type: 3}
+      propertyPath: m_TagString
+      value: TowerInHand
+      objectReference: {fileID: 0}
     - target: {fileID: 6373423799177270463, guid: 2062908325e58874ebf00a9c54237ba7,
         type: 3}
       propertyPath: m_Materials.Array.size
@@ -674,6 +734,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: e3b28c9e4c34efa4dacea086ff40f5e0, type: 2}
+    - target: {fileID: 6692569105693466180, guid: 2062908325e58874ebf00a9c54237ba7,
+        type: 3}
+      propertyPath: m_TagString
+      value: TowerInHand
+      objectReference: {fileID: 0}
     - target: {fileID: 6702488842079860923, guid: 2062908325e58874ebf00a9c54237ba7,
         type: 3}
       propertyPath: m_Name
@@ -689,6 +754,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.237
       objectReference: {fileID: 0}
+    - target: {fileID: 7564291729381189946, guid: 2062908325e58874ebf00a9c54237ba7,
+        type: 3}
+      propertyPath: m_TagString
+      value: TowerInHand
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926358071709245054, guid: 2062908325e58874ebf00a9c54237ba7,
+        type: 3}
+      propertyPath: m_TagString
+      value: TowerInHand
+      objectReference: {fileID: 0}
     - target: {fileID: 8012127091042276642, guid: 2062908325e58874ebf00a9c54237ba7,
         type: 3}
       propertyPath: m_Materials.Array.size
@@ -734,6 +809,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: e3b28c9e4c34efa4dacea086ff40f5e0, type: 2}
+    - target: {fileID: 8986705202839117509, guid: 2062908325e58874ebf00a9c54237ba7,
+        type: 3}
+      propertyPath: m_TagString
+      value: TowerInHand
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

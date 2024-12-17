@@ -76,7 +76,7 @@ public class Turret : MonoBehaviour
 		Bullet bullet = bulletGO.GetComponent<Bullet>();
 
 		fireSound.Play();
-		Debug.Log("shoot");
+		//Debug.Log("shoot");
 
 		if (bullet != null)
 			bullet.Seek(target);

@@ -29,6 +29,8 @@ public class SpawnEnemies : MonoBehaviour
     private int currentWave = 1;
     private bool spawningWave = false;
 
+    [SerializeField] private SceneChange sceneChangeScript;
+
     private void Start()
     {
         StartCoroutine(StartWave());
@@ -75,6 +77,8 @@ public class SpawnEnemies : MonoBehaviour
         }
 
         Debug.Log("Vagues finis");
+
+        sceneChangeScript.ChangeScene();
     }
 
     private void SpawnGroundEnemy(GameObject enemyPrefab)

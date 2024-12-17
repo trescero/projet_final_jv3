@@ -1609,7 +1609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabSocle: {fileID: 8484647892076331771, guid: 2faf3030bb1efd240aa25ff202431181,
     type: 3}
-  prefabTour: {fileID: 2666754423541039836, guid: a2ed8b4bd56f0784cba14ebbf0e080b1,
+  prefabTour: {fileID: 3138906675093319328, guid: 27c39ee1c0951264fa66ea39ffb0d5d8,
     type: 3}
   spawnTag: PositionTable
 --- !u!1 &1223298168
@@ -1749,7 +1749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df335d5fa466dcf4290e4d23c4cca781, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Level_2
+  sceneName: EndScene
 --- !u!4 &1330789844 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4574527821592105548, guid: af3467ecf1a7ab8428e0ef8e746be06a,
@@ -1800,11 +1800,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45ae39ab6e17d104688cc230124695fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PrefabWeakGround: {fileID: 882912705239497830, guid: b04b3662fc8f20c4992343847922bc23,
+  PrefabWeakGround: {fileID: 5955348000406129628, guid: 0ebc7fcfbd28d5a48b252c0c3e0ef002,
     type: 3}
-  PrefabStrongGround: {fileID: 6693042249234252570, guid: 761f576ad23752948af6f7f7dd958469,
+  PrefabStrongGround: {fileID: 5007814176237395321, guid: d731957452e465e409b31197e961fc5c,
     type: 3}
-  PrefabAir: {fileID: 602707664490154660, guid: cd85ed08d694dca478c466acfc7486e3,
+  PrefabAir: {fileID: 6323107371075137097, guid: adcf8b4e8f3a5a6488f8e6771db379fa,
     type: 3}
   spawnPositionsScript: {fileID: 1223298170}
   mainTower: {fileID: 1346583500}
@@ -2541,7 +2541,7 @@ MonoBehaviour:
         m_MethodName: SpawnButtonAction
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 5084125700406602444, guid: 0342ef36e9be68540a34e386ec79ca4a,
+          m_ObjectArgument: {fileID: 1222407716311810748, guid: df3b46896a3abef4a864a9f8eb51a0ff,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -27984,21 +27984,9 @@ MonoBehaviour:
         m_MethodName: SpawnButtonAction
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 3550974765127407844, guid: efd717ac9f25ea3408c9b32a4aefb82a,
+          m_ObjectArgument: {fileID: 2526744415906214798, guid: 1cacab8f5bf5f1a4ea809c46e2edfa51,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1899347571614017054}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

@@ -11,4 +11,9 @@ public class SpawnButton : MonoBehaviour
     {
         spawnTower.SetTowerPrefab(newTowerPrefab);
     }
+
+    public void setSoclesAtives(bool state)
+    {
+        spawnTower.ToggleSocles(state);
+    }
 }

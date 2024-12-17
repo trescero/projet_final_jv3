@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ennemi_Petit
   m_EditorClassIdentifier: 
   VieDepart: 400
-  SpeedDepart: 3
+  SpeedDepart: 1
   DamageDepart: 100
   ArgentDepart: 150
   PointDepart: 150
