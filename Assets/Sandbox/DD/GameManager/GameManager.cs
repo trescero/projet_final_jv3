@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
             UpdateUI();
         }
 
+        _player.money = 300;
         _player.hasPlacedFirstTower = false;
     }
 
