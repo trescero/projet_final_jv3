@@ -33,11 +33,18 @@ public class SpawnTower : MonoBehaviour
 
     [Header("Informations Player")]
     [SerializeField] private Player_ScriptableObject player;
-    [SerializeField] private int towerCost = 50;
+    [SerializeField] private int towerCost = 500;
+
+    [Header("Audios")]
+    [SerializeField] private AudioSource audioPlacement;
+
+    [SerializeField] private AudioSource audioWrong;
+
 
     // Variables privées
     private Vector3 hitPoint; // Point d'impact du rayon
     private bool canPlaceTower = false;
+
 
     private void Start()
     {
@@ -54,20 +61,22 @@ public class SpawnTower : MonoBehaviour
         {
             if (selectedTowerPrefab == null)
             {
-                Debug.LogWarning("Aucun type de tour sélectionné !");
+                Debug.LogWarning("Pas de tour selectionner");
                 return;
             }
 
             if (player.money >= towerCost)
             {
                 canPlaceTower = true;
-                Debug.Log("Peut placer une tour.");
+                Debug.Log("Peut placer une tour");
+                
             }
             else
             {
-                Debug.Log("Pas assez d'argent pour placer une tour.");
+                Debug.Log("Pas assez d'argent pour placer une tour");
             }
         }
+
     }
 
     /// <summary>
@@ -153,7 +162,17 @@ public class SpawnTower : MonoBehaviour
             player.money -= towerCost;
             selectedTowerPrefab = null;
             canPlaceTower = false;
-            Debug.Log("Tour placée avec succès. Sélectionnez un nouveau type de tour.");
+            ToggleSocles(false);
+            Debug.Log("Tour placee avec succes. choisir autre tour");
+
+            player.hasPlacedFirstTower = true;
+
+            audioPlacement.Play();
+        }
+
+        else if(OVRInput.GetDown(spawnButton, controller) && canPlaceTower == false)
+        {
+            audioWrong.Play();
         }
     }
 
@@ -161,6 +180,34 @@ public class SpawnTower : MonoBehaviour
     public void SetTowerPrefab(GameObject newTowerPrefab)
     {
         selectedTowerPrefab = newTowerPrefab;
+
+        Turret turretComponent = newTowerPrefab.GetComponent<Turret>();
+
+         
         Debug.Log($"Tour sélectionnée : {newTowerPrefab.name}");
+        towerCost = turretComponent.tourrellesValues.cost;
+
+        ToggleSocles(true);
+
     }
+
+    public void ToggleSocles(bool state)
+{
+    GameObject[] socles = GameObject.FindGameObjectsWithTag("TowerInHand");
+
+    Debug.Log($"transform les socles en {state}. trouver {socles.Length} socles.");
+    
+    foreach (GameObject socle in socles)
+    {
+        MeshRenderer renderer = socle.GetComponent<MeshRenderer>();
+
+        if(renderer != null)
+        {
+            renderer.enabled = state;
+        }
+    }
+
+
+}
+
 }
