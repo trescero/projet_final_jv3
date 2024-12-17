@@ -1,9 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// Finds spawn positions, spawns a specific number of prefabs, and removes used positions.
-/// </summary>
 public class DynamicSpawnHandler : MonoBehaviour
 {
     [Header("Prefabs a spawn")]
