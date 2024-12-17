@@ -853,6 +853,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3613868102660323786, guid: c2e00db6d2dfa42ac8d821db8d493a44,
         type: 3}
+      propertyPath: SceneSettings.RoomPrefabs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3613868102660323786, guid: c2e00db6d2dfa42ac8d821db8d493a44,
+        type: 3}
+      propertyPath: SceneSettings.RoomPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 5618556046422172173, guid: 4b454e8ccd6764ccdbcd91586969863f,
+        type: 3}
+    - target: {fileID: 3613868102660323786, guid: c2e00db6d2dfa42ac8d821db8d493a44,
+        type: 3}
+      propertyPath: SceneSettings.RoomPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 6240677031976514303, guid: d2f5619c7d04eb6419c63a439824ec5f,
+        type: 3}
+    - target: {fileID: 3613868102660323786, guid: c2e00db6d2dfa42ac8d821db8d493a44,
+        type: 3}
       propertyPath: SceneLoadedEvent.m_PersistentCalls.m_Calls.Array.size
       value: 6
       objectReference: {fileID: 0}
@@ -1607,7 +1624,7 @@ MonoBehaviour:
   SpawnAmount: 10
   MaxIterations: 1000
   SpawnLocations: 3
-  Labels: 8088
+  Labels: 8
   CheckOverlaps: 1
   OverrideBounds: -1
   LayerMask:
