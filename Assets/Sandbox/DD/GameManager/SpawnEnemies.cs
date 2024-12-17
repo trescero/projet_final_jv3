@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour
+public class SpawnEnemies : MonoBehaviour
 {
     [Header("Enemy Prefabs")]
     public GameObject PrefabWeakGround;
@@ -74,14 +74,14 @@ public class EnemySpawner : MonoBehaviour
             currentWave++;
         }
 
-        Debug.Log("All waves completed!");
+        Debug.Log("Vagues finis");
     }
 
     private void SpawnGroundEnemy(GameObject enemyPrefab)
     {
         if (spawnPositionsScript.EnemySpawnLocations.Count == 0)
         {
-            Debug.LogWarning("No spawn locations available!");
+            Debug.LogWarning("Pas de spawns");
             return;
         }
 

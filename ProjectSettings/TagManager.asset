@@ -10,6 +10,7 @@ TagManager:
   - TowerBase
   - QDSUIToggleBorderlessButton
   - TowerInHand
+  - PositionTable
   layers:
   - Default
   - TransparentFX

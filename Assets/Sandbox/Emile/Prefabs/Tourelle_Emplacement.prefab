@@ -166,6 +166,21 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e3b28c9e4c34efa4dacea086ff40f5e0, type: 2}
     - target: {fileID: -8679921383154817045, guid: 2062908325e58874ebf00a9c54237ba7,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2062908325e58874ebf00a9c54237ba7,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2062908325e58874ebf00a9c54237ba7,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2062908325e58874ebf00a9c54237ba7,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -213,6 +228,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2062908325e58874ebf00a9c54237ba7,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -6601405716367231473, guid: 2062908325e58874ebf00a9c54237ba7,
         type: 3}
@@ -612,7 +632,7 @@ PrefabInstance:
     - target: {fileID: 6113248285220273500, guid: 2062908325e58874ebf00a9c54237ba7,
         type: 3}
       propertyPath: m_Materials.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6113248285220273500, guid: 2062908325e58874ebf00a9c54237ba7,
         type: 3}
@@ -658,6 +678,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SnapLocationRigidbody
+      objectReference: {fileID: 0}
+    - target: {fileID: 6702488842079860923, guid: 2062908325e58874ebf00a9c54237ba7,
+        type: 3}
+      propertyPath: m_TagString
+      value: TowerBase
       objectReference: {fileID: 0}
     - target: {fileID: 7210453636078413402, guid: 2062908325e58874ebf00a9c54237ba7,
         type: 3}
@@ -785,8 +810,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0

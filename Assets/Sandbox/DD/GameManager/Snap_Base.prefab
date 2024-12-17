@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6019344440520382843}
   m_Layer: 0
   m_Name: SnapLocationRigidbody
-  m_TagString: Untagged
+  m_TagString: TowerBase
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
