@@ -3,15 +3,22 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Target
+  - Ennemi
+  - Tower
+  - TowerBase
+  - QDSUIToggleBorderlessButton
+  - TowerInHand
+  - PositionTable
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Target
   - Water
   - UI
-  - 
+  - NotWalkable
   - 
   - 
   - 

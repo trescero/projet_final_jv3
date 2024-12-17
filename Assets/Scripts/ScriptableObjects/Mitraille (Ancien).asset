@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14d138ae06aeaf84ca8f032dd3775e54, type: 3}
+  m_Name: Mitraille (Ancien)
+  m_EditorClassIdentifier: 
+  range: 10
+  prefabProjectile: {fileID: 5598433681535747799, guid: 3627b8babf3b05e4d82bb10e396ee0a2,
+    type: 3}
+  fireRate: 7
+  turnSpeed: 30
+  cost: 300
+  speed: 35
+  damage: 75
+  explosionRadius: 0
+  impactEffect: {fileID: 6092068517029817883, guid: 371cef5004c06614082d5f420b6e2fd7,
+    type: 3}
