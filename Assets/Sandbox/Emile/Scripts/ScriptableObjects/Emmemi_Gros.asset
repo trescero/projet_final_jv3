@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   VieDepart: 1250
   SpeedDepart: 10
-  DamageDepart: 500
+  DamageDepart: 5000
   ArgentDepart: 350
   PointDepart: 150

@@ -72,7 +72,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScriptEnnemiValeurs: {fileID: 11400000, guid: d04ff1ffa9383a64c9d8367944bb163b,
     type: 2}
-  deathEffect: {fileID: 1983816175683476712, guid: 4c703927a86d48e44b0a22c5367ba8ac,
+  deathEffect: {fileID: 3006495955761976132, guid: 4e63e1ceb335aa8419438ec7f5d25c3d,
     type: 3}
   towerTag: Tower
   isTower: 1
