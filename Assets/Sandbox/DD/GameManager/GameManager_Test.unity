@@ -245,6 +245,7 @@ MonoBehaviour:
   _textMoney: {fileID: 2134506182}
   _textPoints: {fileID: 790371011}
   _player: {fileID: 11400000, guid: 91d1b0b89c9fad745adf769fa10dfd5e, type: 2}
+  uiPointage: {fileID: 0}
 --- !u!4 &259025981
 Transform:
   m_ObjectHideFlags: 0
@@ -1162,7 +1163,6 @@ GameObject:
   - component: {fileID: 1223662115}
   - component: {fileID: 1223662114}
   - component: {fileID: 1223662113}
-  - component: {fileID: 1223662117}
   m_Layer: 0
   m_Name: Cube
   m_TagString: TowerBase
@@ -1256,29 +1256,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1223662117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1223662112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d607ba0c0320e446ba9d62671d9d7a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpawnOnStart: 1
-  SeedValue: 0
-  PrefabsToSpawn:
-  - Labels: 0
-    Prefabs: []
-    PrefabSelection: 0
-    MatchAspectRatio: 0
-    CalculateFacingDirection: 0
-    Scaling: 0
-    Alignment: 0
-    IgnorePrefabSize: 0
 --- !u!114 &1226313112 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 11400010, guid: 126d619cf4daa52469682f85c1378b4a,
@@ -1337,7 +1314,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1346583500
 Transform:
   m_ObjectHideFlags: 0

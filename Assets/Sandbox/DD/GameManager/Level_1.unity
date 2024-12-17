@@ -558,11 +558,43 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7466446452553031260, guid: 7b814476edde9a7489997dee2997c727, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1694182197050404003, guid: 7b814476edde9a7489997dee2997c727,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 434995243}
   m_SourcePrefab: {fileID: 100100000, guid: 7b814476edde9a7489997dee2997c727, type: 3}
+--- !u!1 &434995242 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1694182197050404003, guid: 7b814476edde9a7489997dee2997c727,
+    type: 3}
+  m_PrefabInstance: {fileID: 434995241}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &434995243
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434995242}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9999998, y: 3.135129, z: 1.0000001}
+  m_Center: {x: 0.00000007156444, y: 0.567564, z: -0.00000007156444}
 --- !u!1 &462282055
 GameObject:
   m_ObjectHideFlags: 0
@@ -2219,7 +2251,7 @@ MonoBehaviour:
         m_MethodName: SpawnButtonAction
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1729996401445817104, guid: ccb288cc7a0cc5f41bc8203767c6b4fa,
+          m_ObjectArgument: {fileID: 5084125700406602444, guid: 0342ef36e9be68540a34e386ec79ca4a,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -27505,7 +27537,7 @@ MonoBehaviour:
         m_MethodName: SpawnButtonAction
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7506498879959119148, guid: b7f8fc65a1c6e164e9680e43a1001a14,
+          m_ObjectArgument: {fileID: 3550974765127407844, guid: efd717ac9f25ea3408c9b32a4aefb82a,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
