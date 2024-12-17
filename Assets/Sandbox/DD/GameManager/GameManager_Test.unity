@@ -1337,7 +1337,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1346583500
 Transform:
   m_ObjectHideFlags: 0
@@ -17450,7 +17450,7 @@ MonoBehaviour:
   gizmoDisplay: {fileID: 4396335525730801759}
   gizmoLabelText: {fileID: 6101970952190512562}
   showGizmoLabelText: 0
-  towerPrefab: {fileID: 0}
+  selectedTowerPrefab: {fileID: 0}
   spawnButton: 8192
   player: {fileID: 11400000, guid: 91d1b0b89c9fad745adf769fa10dfd5e, type: 2}
   towerCost: 500

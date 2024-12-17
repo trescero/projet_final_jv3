@@ -8,6 +8,8 @@ TagManager:
   - Ennemi
   - Tower
   - TowerBase
+  - QDSUIToggleBorderlessButton
+  - TowerInHand
   layers:
   - Default
   - TransparentFX
